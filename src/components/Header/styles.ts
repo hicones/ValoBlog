@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  max-width: 100%;
-  margin: 10px auto;
+  width: 100%;
+  padding: 80px;
   display: flex;
   align-items: center;
+  position: absolute;
   justify-content: space-between;
 
   ul {
@@ -23,11 +24,4 @@ export const Container = styled.header`
       }
     }
   }
-`;
-
-export const Logo = styled.h1`
-  font-size: 40px;
-  margin: 20px;
-  font-family: var(--font-valofont);
-  color: var(--primary);
 `;

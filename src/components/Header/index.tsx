@@ -4,31 +4,45 @@ import Image from "next/image";
 // Imports
 import * as S from "./styles";
 import logo from "../../assets/icons/logo.png";
+import { NavLink } from "../NavLink";
 
 function Header() {
   return (
     <S.Container>
-      <Image src={logo} alt="logo" />
+      <a href="">
+        <NavLink href="/">
+          <Image src={logo} alt="logo" />
+        </NavLink>
+      </a>
+
       <ul>
         <li>
-          <a href="" className="body18">
-            About
-          </a>
+          <NavLink href="/">
+            <a href="" className="body18">
+              About
+            </a>
+          </NavLink>
         </li>
         <li>
-          <a href="" className="body18">
-            Agents
-          </a>
+          <NavLink href="/agents">
+            <a href="" className="body18">
+              Agents
+            </a>
+          </NavLink>
         </li>
         <li>
-          <a href="" className="body18">
-            Maps
-          </a>
+          <NavLink href="/maps">
+            <a href="" className="body18">
+              Maps
+            </a>
+          </NavLink>
         </li>
         <li>
-          <a href="" className="body18">
-            Guns
-          </a>
+          <NavLink href="/guns">
+            <a href="" className="body18">
+              Guns
+            </a>
+          </NavLink>
         </li>
       </ul>
     </S.Container>
