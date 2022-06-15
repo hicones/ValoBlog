@@ -44,6 +44,13 @@ function Header() {
             </a>
           </NavLink>
         </li>
+        <li>
+          <NavLink href="/news">
+            <a href="" className="body18">
+              News
+            </a>
+          </NavLink>
+        </li>
       </ul>
     </S.Container>
   );

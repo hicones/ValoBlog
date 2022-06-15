@@ -1,12 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import Header from "../src/components/Header";
+import { Container } from "../styles/home";
+import Home from "../src/components/models/modelHome";
+import AboutModel from "../src/components/models/modelAbout";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
-    <>
-      <div>a</div>
-    </>
+    <Container>
+      <Home />
+      <AboutModel />
+    </Container>
   );
 };
 
-export default Home;
+export default About;

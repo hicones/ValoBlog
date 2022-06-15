@@ -49,13 +49,13 @@ button,
   @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
   // Valorant Font
   @font-face {
-    font-family: "Valofont";
-    src: url("../src/assets/fonts/valofont.ttf") format("truetype");
+    font-family: Valorant;
+    src: url("../src/assets/fonts/valorant/Valorant\ Font.ttf") format("truetype");
   }
 
   // ===== Fonts =====
   --font-SourceSans: "Source Sans Pro", sans-serif;
-  --font-valofont: "Valofont";
+  --font-valofont: "Valorant", sans-serif;
 
   // ===== Colors =====
   // Primary Colors
@@ -117,30 +117,31 @@ button,
   }
 
   .heading24 {
-    font-family: var(--font-valofont);
+    font-family: var(--font-SourceSans);
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 130%;
   }
 
   .heading20 {
-    font-family: var(--font-valofont);
-    font-weight: 700;
+    font-family: var(--font-SourceSans);
+    font-weight: 600;
     font-size: 1.25rem;
     line-height: 150%;
   }
 
   .heading18 {
-    font-family: var(--font-valofont);
-    font-weight: 600;
+    font-family: var(--font-SourceSans);
+    font-weight: 500;
     font-size: 1.125rem;
     line-height: 118%;
   }
 
-  // Inter UI - General Texts
+  // SourceSans UI - General Texts
+
   .body18 {
     font-family: var(--font-SourceSans);
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.125rem;
     line-height: 160%;
   }

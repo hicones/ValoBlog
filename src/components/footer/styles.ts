@@ -12,6 +12,7 @@ export const MainFooter = styled.div`
   height: 800px;
   display: flex;
   background: var(--white);
+  z-index: 1;
 
   @media screen and (max-width: 900px) {
     height: 350px;
@@ -121,7 +122,7 @@ export const Copy = styled.div`
 export const FooterBg = styled.div`
   width: 1423px;
   left: 800px;
-  overflow-x: hidden;
+  z-index: 1;
   position: absolute;
 
   @media screen and (max-width: 1500px) {

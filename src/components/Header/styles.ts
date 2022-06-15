@@ -6,6 +6,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   position: absolute;
+  z-index: 1;
   justify-content: space-between;
 
   ul {
@@ -14,7 +15,7 @@ export const Container = styled.header`
     list-style: none;
     li {
       margin-right: 80px;
-      color: var(--white);
+      color: var(--gray05);
       :hover {
         color: var(--primary);
       }
