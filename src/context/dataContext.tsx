@@ -14,8 +14,6 @@ type IDataContext = {
   agents: IAgents[];
   maps: IMaps[];
   guns: IGuns[];
-  modal: boolean;
-  ToggleModal: () => void;
 };
 
 //Context
@@ -25,11 +23,6 @@ function DataProvider({ children }: props) {
   const [agents, setAgents] = useState<IAgents[]>([]);
   const [maps, setMaps] = useState<IMaps[]>([]);
   const [guns, setGuns] = useState<IGuns[]>([]);
-  const [modal, setModal] = useState(false);
-
-  const ToggleModal = () => {
-    setModal(!modal);
-  };
 
   useEffect(() => {
     api.get(``).then((res) => {
@@ -81,7 +74,7 @@ function DataProvider({ children }: props) {
     });
   }, []);
 
-  return <DataContext.Provider value={{ agents, maps, guns, ToggleModal, modal }}>{children}</DataContext.Provider>;
+  return <DataContext.Provider value={{ agents, maps, guns }}>{children}</DataContext.Provider>;
 }
 
 export { DataProvider, DataContext };
