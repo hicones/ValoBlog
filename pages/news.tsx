@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Header from "../src/components/Header";
 import NewsComponent from "../src/components/NewsComponent";
 import { Container, Main } from "../styles/news";
 import { NewsContext } from "../src/context/newsContext";

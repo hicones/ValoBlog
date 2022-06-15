@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Header from "../src/components/Header";
 import { Container, Main } from "../styles/agents";
 import AgentsCard from "../src/components/agentsComponent";
 import { useContext } from "react";

@@ -19,6 +19,10 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  :hover {
+    opacity: 0.5;
+  }
 `;
 
 export const MainNews = styled.div`

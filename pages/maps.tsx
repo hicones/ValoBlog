@@ -1,10 +1,15 @@
 import type { NextPage } from "next";
-import Header from "../src/components/Header";
-import { Container, Main, Button } from "../styles/maps";
+import { Container, Main, Button, MainMaps } from "../styles/maps";
 import { AiFillCaretDown } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import MapsComponent from "../src/components/mapsComponent";
+import { useContext } from "react";
+import { DataContext } from "../src/context/dataContext";
+import Modal from "../src/components/modal";
 
 const Maps: NextPage = () => {
+  const { maps } = useContext(DataContext);
+
   return (
     <Container>
       <Main>
@@ -24,12 +29,29 @@ const Maps: NextPage = () => {
             letters instead, with each letter representing a digit.
           </p>
         </div>
-        <Button>
+        <Button href="#maps">
           <IconContext.Provider value={{ size: "2em" }}>
             <AiFillCaretDown />
           </IconContext.Provider>
           <a className="heading24">SELECT A MAP</a>
         </Button>
+
+        <MainMaps id="maps">
+          {maps.map((maps) => (
+            <>
+              <MapsComponent
+                key={maps.uuid}
+                uuid={maps.uuid}
+                description={maps.description}
+                displayName={maps.displayName}
+                displayIcon={maps.displayIcon}
+                listViewIcon={maps.listViewIcon}
+                splash={maps.splash}
+                callouts={maps.callouts}
+              />
+            </>
+          ))}
+        </MainMaps>
       </Main>
     </Container>
   );

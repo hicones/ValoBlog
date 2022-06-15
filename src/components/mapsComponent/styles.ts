@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 150px;
-  height: 150px;
-  border: 2px solid var(--primary-light);
+  width: 600px;
+  height: 400px;
+  border: 2px solid var(--gray02);
+  background: var(--gray01);
   border-radius: 8px;
   margin: 10px;
   display: flex;
@@ -12,12 +13,12 @@ export const Container = styled.div`
   cursor: pointer;
 
   div {
-    width: 150px;
-    height: 150px;
-    background: var(--primary);
+    width: 600px;
+    height: 400px;
+    background: var(--gray01);
 
     :hover {
-      opacity: 0.1;
+      opacity: 0.5;
     }
   }
 
@@ -49,6 +50,7 @@ export const Container = styled.div`
   span {
     position: absolute;
     display: none;
+    text-transform: uppercase;
     color: var(--white);
   }
 `;
@@ -56,7 +58,15 @@ export const Container = styled.div`
 export const Thumbnail = styled.img`
   padding: 3px;
   box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.2);
-  width: 150px;
+  width: 600px;
+  height: 400px;
   border-radius: 8px;
-  height: 150px;
+`;
+
+export const Splash = styled.img`
+  padding: 3px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  height: 400px;
+  border-radius: 8px;
 `;

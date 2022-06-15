@@ -21,7 +21,7 @@ export const Main = styled.main`
   }
 `;
 
-export const Button = styled.div`
+export const Button = styled.a`
   width: 400px;
   height: 80px;
   cursor: pointer;
@@ -54,4 +54,11 @@ export const Button = styled.div`
       transform: scaleY(1);
     }
   }
+`;
+
+export const MainMaps = styled.main`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 `;

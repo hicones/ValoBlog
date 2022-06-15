@@ -2,14 +2,16 @@ import React, { memo } from "react";
 
 import * as S from "./styles";
 import Image from "next/image";
-import thumb from "../../assets/footer/backgroundFooter.png";
 
-import { IAgents } from "../../interfaces/data.interface";
+import { IAgents } from "../../interfaces/agents.interface";
 
-function AgentsCard({ displayIcon, description, displayName }: IAgents) {
+function AgentsCard({ displayIcon, displayName }: IAgents) {
   return (
     <S.Container>
-      <S.Thumbnail src={displayIcon} />
+      <span className="body18">{displayName}</span>
+      <div>
+        <S.Thumbnail src={displayIcon} />
+      </div>
     </S.Container>
   );
 }
