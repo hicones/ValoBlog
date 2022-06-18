@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import { Container, Main, Button, MainMaps } from "../styles/maps";
+import { Container, Main, Button, MainMaps } from "../../styles/maps";
 import { AiFillCaretDown } from "react-icons/ai";
 import { IconContext } from "react-icons";
-import MapsComponent from "../src/components/mapsComponent";
+import MapsComponent from "../../src/components/mapsComponent";
 import { useContext } from "react";
-import { DataContext } from "../src/context/dataContext";
+import { DataContext } from "../../src/context/dataContext";
 
 const Maps: NextPage = () => {
   const { maps } = useContext(DataContext);

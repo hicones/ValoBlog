@@ -20,6 +20,10 @@ export const Container = styled.div`
     :hover {
       opacity: 0.5;
     }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   :hover {
@@ -45,6 +49,9 @@ export const Container = styled.div`
         transform: translateY(0);
       }
     }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   span {
@@ -52,6 +59,10 @@ export const Container = styled.div`
     display: none;
     text-transform: uppercase;
     color: var(--white);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
   }
 `;
 
@@ -61,6 +72,10 @@ export const Thumbnail = styled.img`
   width: 600px;
   height: 400px;
   border-radius: 8px;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Splash = styled.img`
