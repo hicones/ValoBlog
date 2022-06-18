@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { Container, Main } from "../styles/agents";
-import AgentsCard from "../src/components/agentsComponent";
+import { Container, Main } from "../../styles/agents";
+import AgentsCard from "../../src/components/agentsComponent";
 import { useContext } from "react";
-import { DataContext } from "../src/context/dataContext";
+import { DataContext } from "../../src/context/dataContext";
 
 const Agents: NextPage = () => {
   const { agents } = useContext(DataContext);

@@ -25,8 +25,8 @@ function DataProvider({ children }: props) {
   const [guns, setGuns] = useState<IGuns[]>([]);
 
   useEffect(() => {
-    api.get(``).then((res) => {
-      const resData: IAgents[] = res.data.Agents;
+    api.get(`/agents`).then((res) => {
+      const resData: IAgents[] = res.data;
       const agents = resData.map((agent) => ({
         uuid: agent.uuid,
         displayName: agent.displayName,
@@ -45,8 +45,8 @@ function DataProvider({ children }: props) {
       }));
       setAgents(agents);
     });
-    api.get(``).then((res) => {
-      const resDataMaps: IMaps[] = res.data.Maps;
+    api.get(`/maps`).then((res) => {
+      const resDataMaps: IMaps[] = res.data;
       const maps = resDataMaps.map((map) => ({
         uuid: map.uuid,
         displayName: map.displayName,
@@ -58,8 +58,8 @@ function DataProvider({ children }: props) {
       }));
       setMaps(maps);
     });
-    api.get(``).then((res) => {
-      const resDataGuns: IGuns[] = res.data.Guns;
+    api.get(`/guns`).then((res) => {
+      const resDataGuns: IGuns[] = res.data;
       const guns = resDataGuns.map((gun) => ({
         uuid: gun.uuid,
         displayName: gun.displayName,

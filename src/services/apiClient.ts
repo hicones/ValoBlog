@@ -5,7 +5,7 @@ import axios from "axios";
 export function getAPIClient(ctx?: any) {
   //create api
   const api = axios.create({
-    baseURL: "http://demo4367515.mockable.io/valorantapiv1"
+    baseURL: "/api/valorantAPI"
   });
   return api;
 }

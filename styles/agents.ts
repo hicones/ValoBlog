@@ -25,5 +25,6 @@ export const Main = styled.main`
   div.agentSection {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;

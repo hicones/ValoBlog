@@ -18,22 +18,6 @@ function MapsCard({ splash, displayName, callouts, description, displayIcon }: I
       <div>
         <S.Thumbnail src={splash} />
       </div>
-
-      {/*   <div className="mainModal">
-        <h2 className="heading40">{displayName}</h2>
-        <S.Splash src={splash} alt="" />
-        <p className="heading20">{description}</p>
-        <S.Splash src={displayIcon} alt="" />
-      </div>
-      <h2 className="heading40">CALLOUTS</h2>
-      <div className="callouts">
-        {callouts.map((callout) => (
-          <p key={callout.regionName}>
-            <VscDebugBreakpointLog />
-            <span className="heading20">{callout.regionName}</span>
-          </p>
-        ))}
-      </div> */}
     </S.Container>
   );
 }
