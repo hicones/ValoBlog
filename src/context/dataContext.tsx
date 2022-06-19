@@ -5,6 +5,7 @@ import { api } from "../services/api";
 import { IAgents } from "../interfaces/agents.interface";
 import { IMaps } from "../interfaces/maps.interface";
 import { IGuns } from "../interfaces/guns.interface";
+import axios from "axios";
 
 type props = {
   children: React.ReactNode;

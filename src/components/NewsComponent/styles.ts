@@ -10,6 +10,7 @@ export const Container = styled.div`
   padding: 10px;
   cursor: pointer;
   border: 2px solid var(--primary);
+  transition: ease-out 0.3s;
 
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -22,6 +23,7 @@ export const Container = styled.div`
 
   :hover {
     opacity: 0.5;
+    box-shadow: inset 1400px 0 0 0 var(--primary);
   }
 `;
 

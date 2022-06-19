@@ -6,7 +6,7 @@ interface Callout {
 export interface IMaps {
   uuid: string;
   displayName: string;
-  description: string;
+  description?: string;
   displayIcon: string;
   listViewIcon: string;
   splash: string;
