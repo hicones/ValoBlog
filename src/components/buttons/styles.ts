@@ -13,7 +13,7 @@ export const buttonContainer = styled.div`
     height: 50%;
     left: -0.3em;
     top: -0.3em;
-    border: 1px solid #0e1822;
+    border: 1px solid var(--white);
     border-bottom: 0px;
   }
   :after {
@@ -23,7 +23,7 @@ export const buttonContainer = styled.div`
     height: 50%;
     left: -0.3em;
     bottom: -0.3em;
-    border: 1px solid #0e1822;
+    border: 1px solid var(--white);
     border-top: 0px;
   }
 `;
@@ -125,7 +125,7 @@ export const button2 = styled.button`
   border: none;
   transition: 0.3s ease-in-out;
   :hover {
-    background: var(--primary-light);
+    box-shadow: inset 260px 0 0 0 var(--primary-light);
     color: var(--white);
   }
 `;

@@ -10,9 +10,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  transition: ease-out 0.4s;
 
   :hover {
-    background: var(--primary);
+    box-shadow: inset 600px 0 0 0 var(--primary);
+
     h3 {
       color: var(--white);
     }

@@ -86,6 +86,15 @@ function Footer() {
           of Riot Games, Inc.
         </p>
       </S.Copy>
+      <S.CopyCreator>
+        <p className="body18">
+          Created By
+          <a href="https://github.com/hicones" target="blank">
+            {" "}
+            Hicones
+          </a>
+        </p>
+      </S.CopyCreator>
     </S.Container>
   );
 }

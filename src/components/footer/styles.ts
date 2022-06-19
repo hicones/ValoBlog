@@ -14,8 +14,8 @@ export const MainFooter = styled.div`
   background: var(--white);
   z-index: 1;
 
-  @media screen and (max-width: 900px) {
-    height: 350px;
+  @media screen and (max-width: 1500px) {
+    height: 400px;
   }
 `;
 
@@ -65,7 +65,7 @@ export const Social = styled.div`
     align-items: center;
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1500px) {
     margin-left: 0;
     max-width: 100%;
     flex-direction: row;
@@ -98,6 +98,10 @@ export const Social = styled.div`
       align-items: center;
     }
   }
+
+  @media screen and (max-width: 1500px) {
+    margin-top: 30px;
+  }
 `;
 
 export const Copy = styled.div`
@@ -113,19 +117,34 @@ export const Copy = styled.div`
     display: flex;
     width: 33%;
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1500px) {
       width: 50%;
     }
   }
 `;
 
 export const FooterBg = styled.div`
-  width: 1423px;
-  left: 800px;
+  width: 1070px;
+  right: 0;
   z-index: 1;
   position: absolute;
+  overflow: hidden;
 
   @media screen and (max-width: 1500px) {
     display: none;
+  }
+`;
+
+export const CopyCreator = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+  background: var(--gray03);
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+
+  a {
+    color: var(--primary);
   }
 `;

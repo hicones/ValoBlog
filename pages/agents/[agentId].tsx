@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
-import React from "react";
+import React, { useState } from "react";
 import { IAgents } from "../../src/interfaces/agents.interface";
+import * as S from "../../styles/agentPage";
 
 interface AgentsProps {
   agent: IAgents;
@@ -50,6 +52,59 @@ export const getStaticProps: GetStaticProps<AgentsProps, Params> = async (contex
 };
 
 const Agent: NextPage<AgentsProps> = ({ agent }) => {
-  return <div>{agent?.displayName}</div>;
+  const [index, setIndex] = useState("Q");
+
+  return (
+    <S.Container>
+      <S.MainAgent>
+        <h1>{agent?.displayName}</h1>
+
+        <div className="AgentDescription">
+          <span className="body20">// ROLE</span>
+          <div className="RoleSec">
+            <h2>{agent?.role.displayName}</h2>
+            <S.RoleImage src={agent?.role.displayIcon} alt="" />
+          </div>
+          <span className="body20">// BIOGRAPHY</span>
+          <p className="body24">{agent?.description}</p>
+        </div>
+        <S.AgentImage src={agent?.fullPortraitV2} alt="" />
+      </S.MainAgent>
+      <S.SkillsSection>
+        <h2 className="heading48">SPECIAL ABILITIES</h2>
+
+        <div className="agentSkill">
+          {agent?.abilities.map((skill) => (
+            <>
+              <S.SkillCard
+                key={skill.slot}
+                onClick={() => {
+                  setIndex(skill.slot);
+                }}
+                className={index == skill.slot ? "active" : ""}
+              >
+                <S.SkillCardImg src={skill.displayIcon} alt="" />
+              </S.SkillCard>
+
+              <S.SkillCardContent hidden={index !== skill.slot}>
+                <h3 className="body36">
+                  {skill.slot} - {skill.displayName}
+                </h3>
+
+                <p className="body30">{skill.description}</p>
+              </S.SkillCardContent>
+            </>
+          ))}
+        </div>
+        {agent?.abilities.map((skill) => (
+          <div className="iframeDiv" key={skill.slot}>
+            <video muted loop autoPlay hidden={index !== skill.slot} style={{ width: "100%" }}>
+              <source src={skill.videoUrl} />
+            </video>
+          </div>
+        ))}
+      </S.SkillsSection>
+    </S.Container>
+  );
 };
 export default Agent;

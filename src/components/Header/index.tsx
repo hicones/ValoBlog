@@ -9,49 +9,50 @@ import { NavLink } from "../NavLink";
 function Header() {
   return (
     <S.Container>
-      <a href="">
+      <a href="" className="Logo">
         <NavLink href="/">
           <Image src={logo} alt="logo" />
         </NavLink>
       </a>
-
-      <ul>
-        <li>
-          <NavLink href="/">
-            <a href="" className="body18">
-              About
-            </a>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink href="/agents">
-            <a href="" className="body18">
-              Agents
-            </a>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink href="/maps">
-            <a href="" className="body18">
-              Maps
-            </a>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink href="/guns">
-            <a href="" className="body18">
-              Guns
-            </a>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink href="/news">
-            <a href="" className="body18">
-              News
-            </a>
-          </NavLink>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <NavLink href="/">
+              <a href="" className="body18">
+                About
+              </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/agents">
+              <a href="" className="body18">
+                Agents
+              </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/maps">
+              <a href="" className="body18">
+                Maps
+              </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/guns">
+              <a href="" className="body18">
+                Guns
+              </a>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/news">
+              <a href="" className="body18">
+                News
+              </a>
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </S.Container>
   );
 }

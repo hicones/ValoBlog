@@ -13,8 +13,9 @@ export const Main = styled.main`
   }
 
   div.text {
-    width: 25%;
-    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   @media screen and (max-width: 900px) {

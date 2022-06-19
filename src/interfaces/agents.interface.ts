@@ -11,6 +11,7 @@ interface Ability {
   displayName: string;
   description: string;
   displayIcon: string;
+  videoUrl: string;
 }
 
 interface MediaList {

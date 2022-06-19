@@ -13,6 +13,7 @@ export const Container = styled.header`
     display: flex;
     flex-direction: row;
     list-style: none;
+    transition: visibility 0s, opacity 0.5s linear;
     li {
       margin-right: 80px;
       color: var(--gray05);
@@ -23,6 +24,28 @@ export const Container = styled.header`
       .active {
         color: var(--primary);
       }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 80px 10px;
+
+    nav {
+      width: 100%;
+      height: 70%;
+    }
+
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        font-size: 36px;
+      }
+    }
+
+    a.Logo {
+      display: none;
     }
   }
 `;

@@ -60,23 +60,3 @@ export const ModelHome = styled.div`
     }
   }
 `;
-
-export const Omen = styled.img`
-  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  width: 90%;
-  top: 5%;
-  -webkit-transform: scaleX(-1);
-  z-index: 0;
-
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    top: 38%;
-  }
-  @media screen and (max-width: 600px) {
-    top: 45%;
-  }
-  @media screen and (max-width: 400px) {
-    top: 48%;
-  }
-`;

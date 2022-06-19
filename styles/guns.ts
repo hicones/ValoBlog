@@ -9,26 +9,27 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   width: 100%;
-  margin-left: 15%;
 
   h1 {
     color: var(--gray01);
   }
   div.text {
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   @media screen and (max-width: 900px) {
-    width: 90%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin-left: 0;
   }
 
   .gunsSection {
-    width: 80%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 `;
