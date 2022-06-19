@@ -57,8 +57,6 @@ const Agent: NextPage<AgentsProps> = ({ agent }) => {
   return (
     <S.Container>
       <S.MainAgent>
-        <h1>{agent?.displayName}</h1>
-
         <div className="AgentDescription">
           <span className="body20">// ROLE</span>
           <div className="RoleSec">
@@ -69,40 +67,46 @@ const Agent: NextPage<AgentsProps> = ({ agent }) => {
           <p className="body24">{agent?.description}</p>
         </div>
         <S.AgentImage src={agent?.fullPortraitV2} alt="" />
+        <h1>{agent?.displayName}</h1>
       </S.MainAgent>
       <S.SkillsSection>
         <h2 className="heading48">SPECIAL ABILITIES</h2>
 
-        <div className="agentSkill">
+        <div className="DivisorContainer">
+          <div className="contentSkill">
+            <div className="agentSkill">
+              {agent?.abilities.map((skill) => (
+                <S.SkillCard
+                  key={skill.slot}
+                  onClick={() => {
+                    setIndex(skill.slot);
+                  }}
+                  className={index == skill.slot ? "active" : ""}
+                >
+                  <S.SkillCardImg src={skill.displayIcon} alt="" />
+                </S.SkillCard>
+              ))}
+            </div>
+            <div>
+              {agent?.abilities.map((skill) => (
+                <S.SkillCardContent hidden={index !== skill.slot} key={skill.slot}>
+                  <h3 className="body36">
+                    {skill.slot} - {skill.displayName}
+                  </h3>
+
+                  <p className="body30">{skill.description}</p>
+                </S.SkillCardContent>
+              ))}
+            </div>
+          </div>
           {agent?.abilities.map((skill) => (
-            <>
-              <S.SkillCard
-                key={skill.slot}
-                onClick={() => {
-                  setIndex(skill.slot);
-                }}
-                className={index == skill.slot ? "active" : ""}
-              >
-                <S.SkillCardImg src={skill.displayIcon} alt="" />
-              </S.SkillCard>
-
-              <S.SkillCardContent hidden={index !== skill.slot}>
-                <h3 className="body36">
-                  {skill.slot} - {skill.displayName}
-                </h3>
-
-                <p className="body30">{skill.description}</p>
-              </S.SkillCardContent>
-            </>
+            <div className="iframeDiv VideoSkill" key={skill.slot}>
+              <video muted loop autoPlay hidden={index !== skill.slot} style={{ width: "100%", height: "100%" }}>
+                <source src={skill.videoUrl} />
+              </video>
+            </div>
           ))}
         </div>
-        {agent?.abilities.map((skill) => (
-          <div className="iframeDiv" key={skill.slot}>
-            <video muted loop autoPlay hidden={index !== skill.slot} style={{ width: "100%" }}>
-              <source src={skill.videoUrl} />
-            </video>
-          </div>
-        ))}
       </S.SkillsSection>
     </S.Container>
   );

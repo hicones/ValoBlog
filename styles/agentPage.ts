@@ -6,6 +6,8 @@ export const Container = styled.div`
 
 export const MainAgent = styled.section`
   width: 100%;
+  display: flex;
+  padding: 250px 0 0 20px;
 
   h1 {
     font-family: var(--font-valofont);
@@ -23,7 +25,7 @@ export const MainAgent = styled.section`
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 250px;
+    padding: 0 250px;
 
     div.RoleSec {
       display: flex;
@@ -32,6 +34,29 @@ export const MainAgent = styled.section`
       h2 {
         font-size: 64px;
         font-family: var(--font-valofont);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      position: unset;
+      transform: rotate(0);
+      order: 0;
+      width: 100%;
+      font-size: 78px;
+    }
+    div.AgentDescription {
+      order: 3;
+      width: 100%;
+      padding: 0;
+
+      div.RoleSec {
+        h2 {
+          font-size: 48px;
+        }
       }
     }
   }
@@ -50,49 +75,72 @@ export const AgentImage = styled.img`
   top: 5%;
   right: 300px;
   left: auto;
+
+  @media screen and (max-width: 1600px) {
+    position: unset;
+    order: 2;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 900px) {
+    position: unset;
+    order: 2;
+    width: 70%;
+  }
+
+  @media screen and (max-width: 600px) {
+    position: unset;
+    order: 2;
+    width: 100%;
+  }
 `;
 
+// - - - - - - - - - - - - - - - - - -- - - - - - -
+
 export const SkillsSection = styled.main`
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 5%;
   background: var(--white);
-  padding: 80px 250px;
+  max-height: 110vh;
+
+  h2 {
+    color: var(--gray01);
+  }
+
+  .DivisorContainer {
+    display: flex;
+    color: var(--gray01);
+
+    .contentSkill {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+
+      .contentSkill {
+        order: 1;
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
 
   .agentSkill {
     display: flex;
-
+    flex-direction: row;
+    position: relative;
     .active {
       border: 3px solid var(--primary);
     }
   }
+
   .iframeDiv {
-    position: absolute;
-    right: 200px;
-    width: 720px;
-    height: 480px;
-    top: 42%;
-    overflow: hidden;
-  }
-
-  @media screen and (max-width: 1500px) {
-    padding: 0;
-    align-items: center;
-
-    .iframeDiv {
-      right: auto;
-      bottom: auto;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .iframeDiv {
-      width: 320px;
-      height: 180px;
-      justify-content: center;
-      right: auto;
-    }
+    display: block;
+    max-width: 960px;
   }
 `;
 
@@ -137,8 +185,7 @@ export const SkillCardImg = styled.img`
 `;
 
 export const SkillCardContent = styled.div`
-  position: absolute;
-  margin-top: 80px;
+  max-width: 500px;
   p {
     max-width: 500px;
   }

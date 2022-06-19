@@ -25,7 +25,7 @@ export const MapsModel = styled.div`
     p {
       font-family: var(--font-SourceSans);
       font-weight: 600;
-      width: 500px;
+      max-width: 480px;
     }
   }
 `;
@@ -33,8 +33,23 @@ export const MapsModel = styled.div`
 export const TitleStyled = styled.div`
   position: relative;
   font-family: var(--font-valofont);
+  height: 150px;
+
+  @media screen and (max-width: 1500px) {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    h2 {
+      ::before,
+      ::after {
+        display: none;
+      }
+    }
+  }
+
   h2 {
-    color: var(--gray01);
+    color: var(--white);
     font-size: 64px;
     font-weight: 700;
     position: relative;
@@ -42,27 +57,50 @@ export const TitleStyled = styled.div`
     z-index: 0;
     padding-bottom: 0.7rem;
     @media screen and (max-width: 496px) {
-      font-size: 3.4rem;
+      font-size: 42px;
     }
     @media screen and (max-width: 370px) {
-      font-size: 2.8rem;
+      font-size: 32px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 8em;
+      height: 0.33rem;
+      background-color: var(--white);
+      opacity: 0.7;
+      border-radius: 15px;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 3.5rem;
+      height: 0.33rem;
+      background-color: var(--white);
+      border-radius: 15px;
+      left: 0;
     }
     span {
       font-weight: 700;
       color: rgba(25, 29, 43, 0.44);
       font-size: 130px;
       position: absolute;
-      left: -5%;
-      top: -50%;
+      left: -3%;
+      top: -45%;
       z-index: 0;
-      @media screen and (max-width: 620px) {
-        font-size: 4rem;
+      @media screen and (max-width: 1500px) {
+        font-size: 78px;
+        left: -10%;
+        top: 2%;
       }
       @media screen and (max-width: 496px) {
-        font-size: 3rem;
+        font-size: 42px;
       }
       @media screen and (max-width: 370px) {
-        font-size: 2rem;
+        font-size: 32px;
       }
     }
   }

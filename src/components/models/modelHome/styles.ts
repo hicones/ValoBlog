@@ -4,10 +4,11 @@ type props = {
   background?: any;
 };
 
-export const Container = styled.section<props>`
+export const Container = styled.main<props>`
   width: auto;
   height: 800px;
   background-size: cover;
+  background-position: top;
   mix-blend-mode: color-dodge;
   align-items: center;
   flex-direction: column;

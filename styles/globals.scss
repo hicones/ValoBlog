@@ -144,6 +144,10 @@ button,
     font-weight: 600;
     font-size: 2.25rem;
     line-height: 160%;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2rem;
+    }
   }
 
   .body30 {
@@ -151,6 +155,10 @@ button,
     font-weight: 400;
     font-size: 1.775rem;
     line-height: 160%;
+
+    @media screen and (max-width: 900px) {
+      font-size: 1.5rem;
+    }
   }
 
   .body24 {

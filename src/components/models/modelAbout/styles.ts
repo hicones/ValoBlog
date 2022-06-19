@@ -6,23 +6,8 @@ export const Container = styled.section`
   background: var(--primary);
   display: flex;
 
-  iframe {
-    position: absolute;
-    top: 45%;
-  }
-
-  div.Images {
-    position: absolute;
-    overflow: hidden;
-    width: 720px;
-    height: 800px;
-    display: flex;
-    right: 25%;
-    top: 19%;
-  }
-
   @media screen and (max-width: 1500px) {
-    flex-direction: column;
+    height: 1550px;
   }
 `;
 
@@ -30,30 +15,43 @@ export const ModelAbout = styled.div`
   width: 100%;
   height: auto;
   color: var(--white);
-  padding: 100px 0 0 150px;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
 
-  ::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 650px;
-    background: var(--white);
-    border-radius: 3px;
-    top: 22%;
+  iframe {
     position: absolute;
+    width: 720px;
+    height: 480px;
   }
 
-  h1 {
-    font-size: 64px;
-    color: white;
-    font-family: var(--font-valofont);
-    margin: 30px;
+  div.Images {
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .DivisorContainer {
+    display: flex;
+
+    ::before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 650px;
+      background: var(--white);
+      border-radius: 3px;
+      top: 22%;
+    }
   }
 
   div.text {
-    max-width: 1900px;
-    margin: auto;
-
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
     p {
       max-width: 500px;
       margin-left: 20px;
@@ -62,7 +60,7 @@ export const ModelAbout = styled.div`
 
   ul {
     list-style: none;
-    position: absolute;
+    padding: 0;
     li {
       font-family: var(--font-SourceSans);
       display: flex;
@@ -85,13 +83,50 @@ export const ModelAbout = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1500px) {
+    flex-direction: column;
+    padding: 0;
+
+    .DivisorContainer {
+      flex-direction: column;
+      padding: 10px;
+      height: 100%;
+
+      .Images {
+        order: 0;
+
+        iframe {
+          width: 90%;
+          max-height: 480px;
+        }
+      }
+      .text {
+        order: 1;
+        align-items: center;
+
+        p {
+          max-width: 100%;
+          margin-left: 0;
+        }
+      }
+
+      ::before {
+        display: none;
+      }
+    }
+  }
 `;
 
-export const Jett = styled.img``;
+export const Jett = styled.img`
+  max-width: 720px;
+  overflow: hidden;
+`;
 
 export const TitleStyled = styled.div`
   position: relative;
   font-family: var(--font-valofont);
+  height: 150px;
   h2 {
     color: var(--white);
     font-size: 64px;
@@ -101,16 +136,16 @@ export const TitleStyled = styled.div`
     z-index: 0;
     padding-bottom: 0.7rem;
     @media screen and (max-width: 496px) {
-      font-size: 2.8rem;
+      font-size: 42px;
     }
     @media screen and (max-width: 370px) {
-      font-size: 2rem;
+      font-size: 32px;
     }
     &::before {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 10em;
+      width: 8em;
       height: 0.33rem;
       background-color: var(--white);
       opacity: 0.7;
@@ -135,14 +170,14 @@ export const TitleStyled = styled.div`
       left: -3%;
       top: -45%;
       z-index: 0;
-      @media screen and (max-width: 620px) {
-        font-size: 4rem;
+      @media screen and (max-width: 1200px) {
+        font-size: 78px;
       }
       @media screen and (max-width: 496px) {
-        font-size: 3rem;
+        font-size: 42px;
       }
       @media screen and (max-width: 370px) {
-        font-size: 2rem;
+        font-size: 32px;
       }
     }
   }
