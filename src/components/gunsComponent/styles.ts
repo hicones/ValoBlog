@@ -41,6 +41,10 @@ export const Container = styled.div`
     width: 600px;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 
   p {
@@ -54,7 +58,7 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    width: 100%;
+    width: 90%;
     height: 180px;
 
     h3 {

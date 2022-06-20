@@ -24,6 +24,12 @@ export const Main = styled.main`
     align-items: center;
     justify-content: center;
     margin-left: 0;
+
+    .gunsSection {
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .gunsSection {
