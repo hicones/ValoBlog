@@ -8,7 +8,6 @@ import { DataProvider } from "../src/context/dataContext";
 // components
 import { Layout } from "../src/components/Layout";
 import { motion } from "framer-motion";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (

@@ -171,7 +171,7 @@ export const TitleStyled = styled.div`
       position: absolute;
       left: -3%;
       top: -45%;
-      z-index: 0;
+      z-index: -1;
       @media screen and (max-width: 1500px) {
         font-size: 78px;
         left: -10%;

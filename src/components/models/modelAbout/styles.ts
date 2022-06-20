@@ -167,9 +167,10 @@ export const TitleStyled = styled.div`
       color: rgba(25, 29, 43, 0.44);
       font-size: 130px;
       position: absolute;
+      z-index: 0;
       left: -3%;
       top: -45%;
-      z-index: 0;
+      z-index: -1;
       @media screen and (max-width: 1200px) {
         font-size: 78px;
       }
