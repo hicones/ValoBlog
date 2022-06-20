@@ -10,10 +10,6 @@ export const Container = styled.main<props>`
   display: flex;
   background-size: cover;
   background-position: center;
-
-  @media screen and (max-width: 1500px) {
-    height: 1000px;
-  }
 `;
 
 export const ModelGuns = styled.div`

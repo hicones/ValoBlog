@@ -73,6 +73,8 @@ export const Social = styled.div`
     ul.Termos {
       flex-direction: column;
       font-size: 10px;
+      margin-left: 0;
+      padding: 0;
     }
 
     div.logo2 {
@@ -85,17 +87,22 @@ export const Social = styled.div`
 
     div.censure {
       order: 3;
+      width: 30%;
     }
 
     div.logo1,
     div.logo3 {
-      width: 40%;
+      width: 33%;
     }
 
     div.logos {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: left;
+
+      ul {
+        padding: 0;
+      }
     }
   }
 

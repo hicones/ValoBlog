@@ -9,6 +9,9 @@ export const Container = styled.section`
   @media screen and (max-width: 1500px) {
     height: 1550px;
   }
+  @media screen and (max-width: 600px) {
+    height: 1850px;
+  }
 `;
 
 export const ModelAgent = styled.div`
