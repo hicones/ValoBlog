@@ -23,6 +23,7 @@ export const Container = styled.div`
 
     @media screen and (max-width: 600px) {
       width: 100%;
+      height: 308px;
     }
   }
 
@@ -64,6 +65,9 @@ export const Container = styled.div`
 
   @media screen and (max-width: 600px) {
     width: 100%;
+    height: 308px;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
