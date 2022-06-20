@@ -16,6 +16,7 @@ export const Container = styled.div`
     width: 600px;
     height: 400px;
     background: var(--gray01);
+    border-radius: 8px;
 
     :hover {
       opacity: 0.5;
