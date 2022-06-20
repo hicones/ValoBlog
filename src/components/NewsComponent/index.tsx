@@ -15,7 +15,8 @@ function News({ title, description, urlToImage, publishedAt, url, author, source
 
   const dateformat1 = publishedAt.replace(/-/g, "/");
   const dateformat2 = dateformat1.replace("T", " ");
-  const date = dateformat2.replace("Z", " ");
+  const dateformat3 = dateformat2.replace("Z", " ");
+  const date = dateformat3.replace(":00.0000000", " ");
 
   return (
     <S.Container onClick={OpenNews}>

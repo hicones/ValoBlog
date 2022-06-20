@@ -1,10 +1,10 @@
-interface Source {
-  id: string;
+interface provider {
+  _type: string;
   name: string;
 }
 
 export interface INewsArticles {
-  source: Source;
+  source: provider;
   author: string;
   title: string;
   description: string;
