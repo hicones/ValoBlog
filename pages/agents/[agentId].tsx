@@ -15,9 +15,9 @@ interface Params extends ParsedUrlQuery {
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const res = await axios.get<IAgents[]>(`https://valorantapiv1.mocklab.io/agents`);
+  const res = require("../../src/assets/database/agents.json");
 
-  const paths = res.data.map((agent) => ({
+  const paths = res.map((agent: IAgents) => ({
     params: {
       agentId: agent.uuid
     }
@@ -32,9 +32,9 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 export const getStaticProps: GetStaticProps<AgentsProps, Params> = async (context) => {
   const { agentId } = context.params!;
 
-  const res = await axios.get<IAgents[]>(`https://valorantapiv1.mocklab.io/agents`);
+  const res = require("../../src/assets/database/agents.json");
 
-  const agent = res.data.find((item) => {
+  const agent = res.find((item: IAgents) => {
     return item.uuid === agentId;
   });
 
