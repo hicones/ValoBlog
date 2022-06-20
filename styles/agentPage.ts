@@ -41,6 +41,7 @@ export const MainAgent = styled.section`
   @media screen and (max-width: 1600px) {
     flex-direction: column;
     align-items: center;
+    padding: 100px 0 0 10px;
     h1 {
       position: unset;
       transform: rotate(0);
