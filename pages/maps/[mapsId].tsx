@@ -25,14 +25,14 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 
   return {
     paths,
-    fallback: "blocking"
+    fallback: false
   };
 };
 
 export const getStaticProps: GetStaticProps<AgentsProps, Params> = async (context) => {
   const { mapsId } = context.params!;
 
-  const res = require("../../src/assets/database/agents.json");
+  const res = require("../../src/assets/database/maps.json");
 
   const maps = res.find((item: IMaps) => {
     return item.displayName === mapsId;
