@@ -18,37 +18,27 @@ function Header() {
         <ul>
           <li>
             <NavLink href="/">
-              <a href="" className="body18">
-                About
-              </a>
+              <a href="">About</a>
             </NavLink>
           </li>
           <li>
             <NavLink href="/agents">
-              <a href="" className="body18">
-                Agents
-              </a>
+              <a href="">Agents</a>
             </NavLink>
           </li>
           <li>
             <NavLink href="/maps">
-              <a href="" className="body18">
-                Maps
-              </a>
+              <a href="">Maps</a>
             </NavLink>
           </li>
           <li>
             <NavLink href="/guns">
-              <a href="" className="body18">
-                Guns
-              </a>
+              <a href="">Guns</a>
             </NavLink>
           </li>
           <li>
             <NavLink href="/news">
-              <a href="" className="body18">
-                News
-              </a>
+              <a href="">News</a>
             </NavLink>
           </li>
         </ul>

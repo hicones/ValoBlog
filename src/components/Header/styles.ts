@@ -24,6 +24,12 @@ export const Container = styled.header`
       .active {
         color: var(--primary);
       }
+      a {
+        font-family: var(--font-SourceSans);
+        font-weight: 600;
+        line-height: 118%;
+        font-size: 18px;
+      }
     }
   }
 
@@ -39,8 +45,12 @@ export const Container = styled.header`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0;
       li {
-        font-size: 36px;
+        margin-right: 0;
+        a {
+          font-size: 48px;
+        }
       }
     }
 
