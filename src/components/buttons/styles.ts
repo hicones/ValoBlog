@@ -118,12 +118,42 @@ export const button1 = styled.button`
   }
 `;
 
+export const button2Container = styled.div`
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  z-index: 0;
+
+  :before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 50%;
+    left: -0.3em;
+    top: -0.3em;
+    border: 1px solid var(--white);
+    border-bottom: 0px;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 0.5em);
+    height: 50%;
+    left: -0.3em;
+    bottom: -0.3em;
+    border: 1px solid var(--white);
+    border-top: 0px;
+  }
+`;
+
 export const button2 = styled.button`
   width: 260px;
   height: 60px;
   color: var(--primary-light);
   border: none;
   transition: 0.3s ease-in-out;
+  z-index: 2;
   :hover {
     box-shadow: inset 260px 0 0 0 var(--primary-light);
     color: var(--white);

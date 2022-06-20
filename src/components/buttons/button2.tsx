@@ -7,11 +7,11 @@ import { NavLink } from "../NavLink";
 
 function Button1({ title, value, setValue, href }: IButton) {
   return (
-    <S.buttonContainer className="Button2">
-      <NavLink href={href}>
+    <NavLink href={href}>
+      <S.button2Container className="Button2">
         <S.button2 className="heading40">{title}</S.button2>
-      </NavLink>
-    </S.buttonContainer>
+      </S.button2Container>
+    </NavLink>
   );
 }
 

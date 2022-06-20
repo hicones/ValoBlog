@@ -51,6 +51,7 @@ export const Container = styled.div`
     }
     @media screen and (max-width: 600px) {
       width: 100%;
+      height: 308px;
     }
   }
 
@@ -75,6 +76,7 @@ export const Thumbnail = styled.img`
 
   @media screen and (max-width: 600px) {
     width: 100%;
+    height: 308px;
   }
 `;
 
@@ -84,4 +86,9 @@ export const Splash = styled.img`
   width: 600px;
   height: 400px;
   border-radius: 8px;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 308px;
+  }
 `;

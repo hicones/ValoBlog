@@ -22,6 +22,7 @@ export const MapsModel = styled.div`
   z-index: 1;
 
   div.text {
+    color: var(--gray02);
     p {
       font-family: var(--font-SourceSans);
       font-weight: 600;
