@@ -52,7 +52,8 @@ export const Main = styled.main`
         }
 
         @media screen and (max-width: 1300px) {
-          display: flex;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(8, 1fr);
         }
       }
     }
