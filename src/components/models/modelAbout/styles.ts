@@ -98,7 +98,7 @@ export const ModelAbout = styled.div`
 
         iframe {
           width: 90%;
-          max-height: 480px;
+          max-height: 380px;
         }
       }
       .text {
