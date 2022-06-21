@@ -4,9 +4,10 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const MainAgent = styled.section`
+export const MainAgent = styled.main`
   width: 100%;
   display: flex;
+  height: 100vh;
   padding: 250px 0 0 20px;
 
   h1 {
@@ -42,6 +43,8 @@ export const MainAgent = styled.section`
     flex-direction: column;
     align-items: center;
     padding: 100px 0 0 10px;
+    height: 60%;
+
     h1 {
       position: unset;
       transform: rotate(0);
