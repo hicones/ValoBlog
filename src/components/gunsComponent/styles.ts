@@ -20,14 +20,14 @@ export const Container = styled.div`
     }
     p {
       display: flex;
-      width: 30%;
+      width: 40%;
       margin-left: 15px;
       flex-wrap: wrap;
       position: absolute;
       color: var(--white);
 
       @media screen and (max-width: 600px) {
-        width: 60%;
+        width: 80%;
       }
     }
     img {
