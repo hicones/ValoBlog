@@ -51,9 +51,8 @@ export const Main = styled.main`
           font-weight: 600;
         }
 
-        @media screen and (max-width: 600px) {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(10, 1fr);
+        @media screen and (max-width: 1300px) {
+          display: flex;
         }
       }
     }
@@ -108,6 +107,10 @@ export const MainMaps = styled.main`
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 export const Splash = styled.img`
