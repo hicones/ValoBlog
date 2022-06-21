@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   border: 2px solid var(--gray01);
   border-radius: 2px;
-  max-width: 600px;
+  width: 600px;
   height: 300px;
   margin: 10px;
   display: flex;
@@ -20,10 +20,9 @@ export const Container = styled.div`
     }
     p {
       display: flex;
-      width: 40%;
-      margin-left: 15px;
+      width: 80%;
+      height: 100%;
       flex-wrap: wrap;
-      position: absolute;
       color: var(--white);
 
       @media screen and (max-width: 600px) {
