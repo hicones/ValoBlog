@@ -24,7 +24,7 @@ const Agents: NextPage = () => {
               displayIconSmall={card.displayIconSmall}
               bustPortrait={card.bustPortrait}
               fullPortrait={card.fullPortrait}
-              fullPortraitV2={card.fullPortraitV2}
+              fullPortraitV2={card.fullPortrait}
               killfeedPortrait={card.killfeedPortrait}
               background={card.background}
               role={card.role}

@@ -44,7 +44,7 @@ function AgentsModel() {
             <Button2 title="Agents" href="/agents" />
           </div>
           <div className="Images">
-            <Phoenix src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportraitv2.png" />
+            <Phoenix src="https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/fullportrait.png" />
             <h3>CHECK ALL AGENTS</h3>
           </div>
         </div>

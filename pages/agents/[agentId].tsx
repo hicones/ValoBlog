@@ -66,7 +66,7 @@ const Agent: NextPage<AgentsProps> = ({ agent }) => {
           <span className="body20">// BIOGRAPHY</span>
           <p className="body24">{agent?.description}</p>
         </div>
-        <S.AgentImage src={agent?.fullPortraitV2} alt="" />
+        <S.AgentImage src={agent?.fullPortrait} alt="" />
         <h1>{agent?.displayName}</h1>
       </S.MainAgent>
       <S.SkillsSection>

@@ -45,7 +45,7 @@ function AboutModel() {
           </div>
 
           <div className="Images">
-            <Jett src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportraitv2.png" />
+            <Jett src="https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/fullportrait.png" />
             <iframe
               src="https://www.youtube.com/embed/lWr6dhTcu-E?autoplay=1&mute=1"
               title="Valorant - Official Cinematic Launch Trailer"
